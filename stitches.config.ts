@@ -31,6 +31,13 @@ export const {
       ...purple,
       ...green,
     },
+    radii: {
+      xs: '3px' /* popovers, menus */,
+      sm: '4px' /* badges, tags */,
+      md: '6px' /* buttons, nav items */,
+      lg: '8px' /* cards, drops */,
+      xl: '10px' /* dialogs */,
+    },
   },
   media: {
     bp1: '(min-width: 480px)',
