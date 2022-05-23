@@ -33,10 +33,12 @@ export const {
       text: gray.gray12,
       backgroundProjects:
         'radial-gradient(100% 239.75% at 0% 0%, #E4F9FF 0%, rgba(239, 254, 250, 0.5625) 56.25%, rgba(253, 250, 255, 0) 100%)',
-      backgroundToolkit: 'linear-gradient(180deg, #F2F6F9 0%, #FFFFFF 100%)',
+      backgroundToolkit:
+        'url("shapes-large-light.svg"), linear-gradient(180deg, #F2F6F9 0%, #FFFFFF 100%)',
       backgroundProcess:
         'radial-gradient(100% 239.75% at 0% 0%, rgba(228, 222, 252, 0.3) 0%, rgba(249, 229, 249, 0.15) 42.71%, rgba(206, 231, 254, 0.5) 100%)',
       backgroundContact: 'linear-gradient(180deg, #F2F9F9 0%, #FFFFFF 100%)',
+      backgroundTransparent: 'rgba(255, 255, 255, 0.4)',
     },
     radii: {
       xs: '3px' /* popovers, menus */,
@@ -44,6 +46,9 @@ export const {
       md: '6px' /* buttons, nav items */,
       lg: '8px' /* cards, drops */,
       xl: '10px' /* dialogs */,
+    },
+    shadows: {
+      subtleBorder: '0px 0px 0px 1px rgba(0, 0, 0, 0.1)',
     },
   },
   media: {
@@ -68,10 +73,15 @@ export const darkTheme = createTheme({
     text: '#fff',
     backgroundProjects:
       'radial-gradient(100% 239.75% at 0% 0%, #082636 0%, rgba(5, 1, 5, 0.9) 56.25%, #070000 100%)',
-    backgroundToolkit: 'linear-gradient(180deg, #1C1C1F 0%, #151718 100%)',
+    backgroundToolkit:
+      'url("shapes-large-dark.svg"), linear-gradient(180deg, #1C1C1F 0%, #151718 100%)',
     backgroundProcess:
       'radial-gradient(100% 239.75% at 0% 0%, #301A3A 0%, #341A34 42.71%, #10243D 100%)',
     backgroundContact: 'linear-gradient(180deg, #082636 0%, #0A0B0C 100%)',
+    backgroundTransparent: 'rgba(255, 255, 255, 0.1)',
+  },
+  shadows: {
+    subtleBorder: '0px 0px 0px 1px rgba(0, 0, 0, 0.1)',
   },
 });
 
