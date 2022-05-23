@@ -1,5 +1,6 @@
 import React from 'react';
 import { styled } from '../stitches.config';
+import { TrafficLights } from './TrafficLights';
 
 interface CodeWindowProps extends React.HTMLAttributes<HTMLDivElement> {
   fileName: string;
@@ -18,33 +19,6 @@ const Header = styled('div', {
   position: 'relative',
 });
 
-const WindowActions = styled('div', {
-  display: 'flex',
-  columnGap: 8,
-  position: 'absolute',
-  left: 12,
-  top: 12,
-});
-
-const WindowAction = styled('div', {
-  width: 12,
-  height: 12,
-  borderRadius: 6,
-  variants: {
-    color: {
-      red: {
-        backgroundColor: '#ED6A5E',
-      },
-      yellow: {
-        backgroundColor: '#F4BD50',
-      },
-      green: {
-        backgroundColor: '#61C454',
-      },
-    },
-  },
-});
-
 const FileName = styled('span', {
   fontSize: '12px',
   lineHeight: '12px',
@@ -59,11 +33,7 @@ export const CodeWindow: React.FC<CodeWindowProps> = ({
   return (
     <Container {...other}>
       <Header>
-        <WindowActions>
-          <WindowAction color="red" />
-          <WindowAction color="yellow" />
-          <WindowAction color="green" />
-        </WindowActions>
+        <TrafficLights />
         <FileName>{fileName}</FileName>
       </Header>
     </Container>
