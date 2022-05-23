@@ -39,13 +39,14 @@ export const {
         'radial-gradient(100% 239.75% at 0% 0%, rgba(228, 222, 252, 0.3) 0%, rgba(249, 229, 249, 0.15) 42.71%, rgba(206, 231, 254, 0.5) 100%)',
       backgroundContact: 'linear-gradient(180deg, #F2F9F9 0%, #FFFFFF 100%)',
       backgroundTransparent: 'rgba(255, 255, 255, 0.4)',
+      textSecondary: gray.gray11,
     },
     radii: {
       xs: '3px' /* popovers, menus */,
       sm: '4px' /* badges, tags */,
       md: '6px' /* buttons, nav items */,
       lg: '8px' /* cards, drops */,
-      xl: '10px' /* dialogs */,
+      xl: '12px' /* dialogs */,
     },
     shadows: {
       subtleBorder: '0px 0px 0px 1px rgba(0, 0, 0, 0.1)',
@@ -71,6 +72,7 @@ export const darkTheme = createTheme({
     ...greenDark,
     appBackground: grayDark.gray1,
     text: '#fff',
+    textSecondary: 'rgba(255, 255, 255, 0.8)',
     backgroundProjects:
       'radial-gradient(100% 239.75% at 0% 0%, #082636 0%, rgba(5, 1, 5, 0.9) 56.25%, #070000 100%)',
     backgroundToolkit:
