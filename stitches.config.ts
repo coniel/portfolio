@@ -3,12 +3,12 @@ import {
   gray,
   blue,
   red,
-  purple,
+  violet,
   green,
   grayDark,
   blueDark,
   redDark,
-  purpleDark,
+  violetDark,
   greenDark,
 } from '@radix-ui/colors';
 
@@ -24,12 +24,19 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      appBackground: '#fff',
       ...gray,
       ...blue,
       ...red,
-      ...purple,
+      ...violet,
       ...green,
+      appBackground: '#fff',
+      text: gray.gray12,
+      backgroundProjects:
+        'radial-gradient(100% 239.75% at 0% 0%, #E4F9FF 0%, rgba(239, 254, 250, 0.5625) 56.25%, rgba(253, 250, 255, 0) 100%)',
+      backgroundToolkit: 'linear-gradient(180deg, #F2F6F9 0%, #FFFFFF 100%)',
+      backgroundProcess:
+        'radial-gradient(100% 239.75% at 0% 0%, rgba(228, 222, 252, 0.3) 0%, rgba(249, 229, 249, 0.15) 42.71%, rgba(206, 231, 254, 0.5) 100%)',
+      backgroundContact: 'linear-gradient(180deg, #F2F9F9 0%, #FFFFFF 100%)',
     },
     radii: {
       xs: '3px' /* popovers, menus */,
@@ -52,17 +59,30 @@ export const {
 
 export const darkTheme = createTheme({
   colors: {
-    appBackground: grayDark.gray1,
     ...grayDark,
     ...blueDark,
     ...redDark,
-    ...purpleDark,
+    ...violetDark,
     ...greenDark,
+    appBackground: grayDark.gray1,
+    text: '#fff',
+    backgroundProjects:
+      'radial-gradient(100% 239.75% at 0% 0%, #082636 0%, rgba(5, 1, 5, 0.9) 56.25%, #070000 100%)',
+    backgroundToolkit: 'linear-gradient(180deg, #1C1C1F 0%, #151718 100%)',
+    backgroundProcess:
+      'radial-gradient(100% 239.75% at 0% 0%, #301A3A 0%, #341A34 42.71%, #10243D 100%)',
+    backgroundContact: 'linear-gradient(180deg, #082636 0%, #0A0B0C 100%)',
   },
 });
 
 export const GlobalStyles = globalCss({
+  '*': {
+    margin: 0,
+    color: '$text',
+  },
   body: {
     background: '$appBackground',
+    fontFamily:
+      '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
   },
 });
