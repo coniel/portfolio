@@ -15,9 +15,13 @@ const Button = styled('button', {
   padding: 4,
   height: 28,
   width: 28,
+  background: '$gray3',
   borderRadius: '$xs',
+  '&:hover': {
+    background: '$gray4',
+  },
   '& svg': {
-    fill: '#fff',
+    fill: '$gray11',
     width: 20,
     height: 20,
   },
