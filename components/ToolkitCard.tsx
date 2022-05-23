@@ -9,6 +9,7 @@ interface ToolkitCardProps {
 
 const Container = styled('div', {
   display: 'flex',
+  flex: '0 0 auto',
   flexDirection: 'column',
   alignItems: 'flex-start',
   padding: 15,
