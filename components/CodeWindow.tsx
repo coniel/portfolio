@@ -33,7 +33,13 @@ export const CodeWindow: React.FC<CodeWindowProps> = ({
   return (
     <Container {...other}>
       <Header>
-        <TrafficLights />
+        <TrafficLights
+          style={{
+            position: 'absolute',
+            left: 12,
+            top: 12,
+          }}
+        />
         <FileName>{fileName}</FileName>
       </Header>
     </Container>
