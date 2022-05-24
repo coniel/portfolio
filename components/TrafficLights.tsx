@@ -4,9 +4,6 @@ import { styled } from '../stitches.config';
 const Container = styled('div', {
   display: 'flex',
   columnGap: 8,
-  position: 'absolute',
-  left: 12,
-  top: 12,
 });
 
 const Button = styled('div', {
@@ -28,8 +25,10 @@ const Button = styled('div', {
   },
 });
 
-export const TrafficLights: React.FC = () => (
-  <Container>
+export const TrafficLights: React.FC<React.HTMLAttributes<HTMLDivElement>> = (
+  props,
+) => (
+  <Container {...props}>
     <Button color="red" />
     <Button color="yellow" />
     <Button color="green" />
