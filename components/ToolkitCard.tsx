@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTheme } from 'next-themes';
 import { styled } from '../stitches.config';
 
 interface ToolkitCardProps {
   icon: string;
+  iconDark?: string;
   name: string;
   description: string;
 }
@@ -38,12 +40,20 @@ const Description = styled('p', {
 
 export const ToolkitCard: React.FC<ToolkitCardProps> = ({
   icon,
+  iconDark,
   name,
   description,
 }) => {
+  const { resolvedTheme } = useTheme();
+
   return (
     <Container>
-      <Icon alt={`${name} icon`} src={`/toolkit-logos/${icon}`} />
+      <Icon
+        alt={`${name} icon`}
+        src={`/toolkit-logos/${
+          resolvedTheme === 'dark' && iconDark ? iconDark : icon
+        }`}
+      />
       <Name>{name}</Name>
       <Description>{description}</Description>
     </Container>
