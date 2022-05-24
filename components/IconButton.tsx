@@ -15,13 +15,14 @@ const Button = styled('button', {
   padding: 4,
   height: 28,
   width: 28,
-  background: '$gray3',
+  background: 'none',
   borderRadius: '$xs',
   '&:hover': {
     background: '$gray4',
   },
   '& svg': {
     fill: '$gray11',
+    stroke: '$gray11',
     width: 20,
     height: 20,
   },
