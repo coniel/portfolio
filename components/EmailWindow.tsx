@@ -1,6 +1,6 @@
 import React from 'react';
 import { Send } from '../icons/Send';
-import { styled, darkTheme, keyframes } from '../stitches.config';
+import { styled, darkTheme } from '../stitches.config';
 import { IconButton } from './IconButton';
 import { TrafficLights } from './TrafficLights';
 
