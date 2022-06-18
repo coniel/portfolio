@@ -1,3 +1,5 @@
+import { ArrowLeft } from './ArrowLeft';
+import { ArrowRight } from './ArrowRight';
 import { Bold } from './Bold';
 import { DarkTheme } from './DarkTheme';
 import { Italic } from './Italic';
@@ -7,6 +9,8 @@ import { Send } from './Send';
 import { Underline } from './Underline';
 
 export const Icons = {
+  ArrowLeft,
+  ArrowRight,
   Bold,
   DarkTheme,
   Italic,

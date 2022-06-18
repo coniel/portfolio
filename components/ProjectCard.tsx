@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image } from './Image';
+import { GrabBox } from './Carousel';
 import { styled } from '../stitches.config';
 
 interface ProjectCardProps {
@@ -29,6 +30,7 @@ const Title = styled('h3', {
   lineHeight: '22px',
   marginTop: 15,
   fontWeight: 600,
+  userSelect: 'none',
 });
 
 const Description = styled('p', {
@@ -36,6 +38,7 @@ const Description = styled('p', {
   fontSize: '15px',
   lineHeight: '23px',
   fontWeight: 400,
+  userSelect: 'none',
 });
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -55,8 +58,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           alt="Screenshot"
         />
       </ImageContainer>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
+      <GrabBox>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+      </GrabBox>
     </Container>
   );
 };

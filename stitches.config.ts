@@ -10,6 +10,7 @@ import {
   redDark,
   violetDark,
   greenDark,
+  blackA,
 } from '@radix-ui/colors';
 
 export const {
@@ -29,6 +30,7 @@ export const {
       ...red,
       ...violet,
       ...green,
+      ...blackA,
       appBackground: '#fff',
       text: gray.gray12,
       backgroundProjects:
@@ -70,6 +72,7 @@ export const darkTheme = createTheme({
     ...redDark,
     ...violetDark,
     ...greenDark,
+    ...blackA,
     appBackground: grayDark.gray1,
     text: '#fff',
     textSecondary: 'rgba(255, 255, 255, 0.8)',

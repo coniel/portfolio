@@ -1,10 +1,20 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { ThemeToggle } from '../components';
+import { styled } from '../stitches.config';
+import { Contact } from '../components/Contact';
+import { Header } from '../components/Header';
+import { Process } from '../components/Process';
+import { RecentProjects } from '../components/RecentProjects';
+import { Tooltkit } from '../components/Toolkit';
+
+const Container = styled('div', {
+  width: '100vw',
+  overflowX: 'hidden',
+});
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <Container>
       <Head>
         <title>Oscar Coniel</title>
         <meta
@@ -12,13 +22,14 @@ const Home: NextPage = () => {
           content="Fullstack developer based in Helsinki, Finland."
         />
       </Head>
-
-      <div>
-        <ThemeToggle />
-      </div>
-
-      <main></main>
-    </div>
+      <main>
+        <Header />
+        <RecentProjects />
+        <Tooltkit />
+        <Process />
+        <Contact />
+      </main>
+    </Container>
   );
 };
 
